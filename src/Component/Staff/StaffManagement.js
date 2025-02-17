@@ -58,16 +58,17 @@ const StaffManagement = () => {
   const [errors, setErrors] = useState({});
 
   const handlePerformance = (staffId) => {
-    navigate(`/staffPerformance/${staffId}`);
+    navigate('/staffPerformance', { state: { staffId } });
   };
-
+  
   const handleStaffSchedule = (staffId) => {
-    navigate(`/staffSchedule/${staffId}`);
+    navigate('/staffSchedule', { state: { staffId } });
   };
-
+  
   const handleAttendance = (staffId) => {
-    navigate(`/staffAttendance/${staffId}`);
+    navigate('/staffAttendance', { state: { staffId } });
   };
+  
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);

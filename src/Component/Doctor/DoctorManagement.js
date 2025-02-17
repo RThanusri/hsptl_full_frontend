@@ -411,18 +411,19 @@ const DoctorManagement = () => {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => navigate(`/doctorPerformance/${doctorId}`)} color="primary">
-            Performance
-          </Button>
-          <Button onClick={() => navigate(`/doctorSchedule/${doctorId}`)} color="secondary">
-            Schedule
-          </Button>
-          <Button onClick={() => navigate(`/doctorAttendance/${doctorId}`)} color="success">
-            Attendance
-          </Button>
-          <Button onClick={() => navigate(`/doctorAppointments/${doctorId}`)} color="info">
-            Appointments
-          </Button>
+        <Button onClick={() => navigate('/doctorPerformance', { state: { doctorId } })} color="primary">
+  Performance
+</Button>
+<Button onClick={() => navigate('/doctorSchedule', { state: { doctorId } })} color="secondary">
+  Schedule
+</Button>
+<Button onClick={() => navigate('/doctorAttendance', { state: { doctorId } })} color="success">
+  Attendance
+</Button>
+<Button onClick={() => navigate('/doctorAppointments', { state: { doctorId } })} color="info">
+  Appointments
+</Button>
+
           <Button onClick={handleUpdateDoctor} color="primary" startIcon={<EditIcon />}>
           
           </Button>

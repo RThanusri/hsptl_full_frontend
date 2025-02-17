@@ -23,10 +23,11 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Insurance = () => {
-  const { patientId } = useParams();
+  const location = useLocation();
+  const { patientId } = location.state|| {};
   const [formErrors, setFormErrors] = useState({});
   const [insuranceDetails, setInsuranceDetails] = useState([]);
   const [filteredInsuranceDetails, setFilteredInsuranceDetails] = useState([]); // Use a separate state for filtered data

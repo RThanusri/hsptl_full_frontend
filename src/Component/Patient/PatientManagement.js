@@ -242,11 +242,11 @@ const PatientManagement = () => {
   };
 
   const viewInsurance = (patientId) => {
-    navigate(`/insurance/${patientId}`);
+    navigate('/insurance', { state: { patientId } });
   };
 
   const viewMedicalHistory = (patientId) => {
-    navigate(`/medicalhistory/${patientId}`);
+    navigate('/medicalhistory', { state: { patientId } });
   };
 
   const handleCheckboxChange = (patient) => {

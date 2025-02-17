@@ -25,12 +25,14 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SearchIcon from "@mui/icons-material/Search";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const MedicalHistoryManagement = () => {
-  const { patientId } = useParams();
+  const location = useLocation();
+  const { patientId } = location.state ||{}; 
+
 
   const [medicalHistoryId, setMedicalHistoryId] = useState("");
   const [showAlert, setShowAlert] = useState(false);

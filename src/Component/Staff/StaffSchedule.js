@@ -27,12 +27,13 @@ import {
 import axios from "axios";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 
 const StaffSchedule = () => {
-  const { staffId } = useParams();
+  const location = useLocation();
+  const { staffId } = location.state|| {};
   const [scheduleDetails, setScheduleDetails] = useState([]);
   const [filteredSchedules, setFilteredSchedules] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");

@@ -24,11 +24,12 @@ import {
 } from "@mui/material";
 import { Line } from "react-chartjs-2";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 Chart.register(...registerables);
 
 const StaffPerformance = () => {
-  const { staffId } = useParams();
+  const location = useLocation();
+  const { staffId } = location.state|| {};
   const [formData, setFormData] = useState({
     staffId: "",
     patientsSeen: "",

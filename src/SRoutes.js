@@ -38,18 +38,18 @@ const SRoutes = () => {
       <Route path="/patients" element={<PatientManagement />} />
       <Route path="/" element={<HomePage />} />
       <Route path="/*" element={<SRoutes />} /> 
-      <Route path="/insurance/:patientId" element={<Insurance/>} />
-      <Route path="/medicalhistory/:patientId" element={<MedicalHistoryManagement/>} />
-      <Route path="/staffSchedule/:staffId" element={<StaffSchedule/>} />
-      <Route path="/staffAttendance/:staffId" element={<StaffAttendance/>} />
-      <Route path="/doctorSchedule/:doctorId" element={<DoctorSchedule/>} />
-      <Route path="/doctorPerformance/:doctorId" element={<DoctorPerformance/>} />
-      <Route path="/doctorAttendance/:doctorId" element={<DoctorAttendance/>} />
-      <Route path="/doctorAppointments/:doctorId" element={<DoctorAppointments/>} />
+      <Route path="/insurance" element={<Insurance />} />
+      <Route path="/medicalhistory" element={<MedicalHistoryManagement/>} />
+      <Route path="/staffSchedule" element={<StaffSchedule/>} />
+      <Route path="/staffAttendance" element={<StaffAttendance/>} />
+      <Route path="/doctorSchedule" element={<DoctorSchedule/>} />
+      <Route path="/doctorPerformance" element={<DoctorPerformance/>} />
+      <Route path="/doctorAttendance" element={<DoctorAttendance/>} />
+      <Route path="/doctorAppointments" element={<DoctorAppointments/>} />
       <Route path="/forgotpassword" element={<ForgotPassword/>} />
       <Route path="/staff" element={<StaffManagement />} />
    
-      <Route path="/staffperformance/:staffId" element={<StaffPerformance/>} />
+      <Route path="/staffperformance" element={<StaffPerformance/>} />
       <Route path="/appointment" element={<AppointmentManagement />} />
     
       <Route path="/doctors" element={<DoctorManagement />} />

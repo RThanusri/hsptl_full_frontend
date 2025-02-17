@@ -27,10 +27,11 @@ import EditIcon from "@mui/icons-material/Edit";
 import axios from "axios";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const DoctorSchedule = () => {
-  const { doctorId } = useParams();
+  const location = useLocation();
+  const { doctorId } = location.state|| {};
   const [scheduleDetails, setScheduleDetails] = useState([]);
   const [filteredSchedules, setFilteredSchedules] = useState([]);
   const [formErrors, setFormErrors] = useState({});

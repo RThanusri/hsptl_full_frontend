@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper,Typography } from "@mui/material";
 import axios from "axios";
 
 const DoctorAppointments = () => {
-  const { doctorId } = useParams();
+  const location = useLocation();
+  const { doctorId } = location.state|| {};
   const [appointments, setAppointments] = useState([]);
 
   useEffect(() => {

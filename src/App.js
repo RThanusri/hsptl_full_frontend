@@ -13,11 +13,11 @@ function App() {
   useEffect(() => {
     const sessionAlertTimer = setTimeout(() => {
       setShowSessionAlert(true);
-    }, 1 * 60 * 1000); 
+    }, 25 * 60 * 1000); 
 
     const autoLogoutTimer = setTimeout(() => {
       handleLogout();
-    }, 2 * 60 * 1000); 
+    }, 30 * 60 * 1000); 
 
     return () => {
       clearTimeout(sessionAlertTimer);

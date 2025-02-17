@@ -24,10 +24,11 @@ import {
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const DoctorAttendance = () => {
-  const { doctorId } = useParams();
+  const location = useLocation();
+  const { doctorId } = location.state|| {};
   const [attendanceRecords, setAttendanceRecords] = useState([]);
   const [alert, setAlert] = useState({ open: false, message: "", type: "" });
   const [page, setPage] = useState(0);
