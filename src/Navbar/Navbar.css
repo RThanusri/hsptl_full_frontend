@@ -1,0 +1,89 @@
+/* Navbar container */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0D3B66;  /* Dark Blue background */
+  padding: 10px 20px;
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;  /* Adjust the size of the logo */
+  height: auto;
+}
+
+/* Navbar menu */
+.navbar-menu {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar menu item */
+.navbar-menu li {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a {
+  color: white;  /* White color for the links */
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  background-color: #1D3557;  /* Lighter Blue for hover effect */
+}
+
+/* Active link color */
+.navbar-menu li.active a {
+  background-color: #F1FAEE;  /* Light color for active link */
+  color: #1D3557;  /* Dark Blue color for active link */
+}
+
+.hospital-name {
+  margin-left: 50px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Styling the logout button */
+.logout-button {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;  /* Transparent background */
+  border: 2px solid white;  /* White border */
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #1D3557;  /* Lighter Blue on hover */
+  color: white;  /* White text color on hover */
+}
+
+/* Navbar mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
